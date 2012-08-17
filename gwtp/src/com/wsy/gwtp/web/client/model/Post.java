@@ -1,0 +1,83 @@
+/**
+ * 
+ */
+package com.wsy.gwtp.web.client.model;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import com.sencha.gxt.core.client.ValueProvider;
+import com.sencha.gxt.data.shared.ModelKeyProvider;
+import com.sencha.gxt.data.shared.PropertyAccess;
+
+/**
+ * @author e518417
+ * 
+ */
+public class Post implements Serializable {
+
+	private static int ID = 0;
+
+	private String username;
+	private String forum;
+	private Date date;
+	private String subject;
+	private int id;
+
+	public Post() {
+		setId(ID++);
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getForum() {
+		return forum;
+	}
+
+	public void setForum(String forum) {
+		this.forum = forum;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public interface PostProperties extends PropertyAccess<Post> {
+		ValueProvider<Post, Date> date();
+
+		ValueProvider<Post, String> forum();
+
+		ModelKeyProvider<Post> id();
+
+		ValueProvider<Post, String> subject();
+
+		ValueProvider<Post, String> username();
+	}
+
+}

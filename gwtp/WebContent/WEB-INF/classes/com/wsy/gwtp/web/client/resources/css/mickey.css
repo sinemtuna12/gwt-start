@@ -1,0 +1,305 @@
+.face
+{
+	width: 500px;
+	height: 500px;
+	margin: 15% auto 0 auto;
+	background: #000;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.ears
+{
+	width: 850px;
+	height: 300px;
+	position: absolute;
+	margin-left: -175px;
+	margin-top: -150px;
+}
+
+.ear
+{
+	height: 300px;
+	width: 300px;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #000;
+	float: left;
+	/*box-shadow*/
+	-webkit-box-shadow: 0 0 5px 0 #000;
+	-moz-box-shadow: 0 0 5px 0 #000;
+	box-shadow: 0 0 5px 0 #000;
+}
+
+.ear1 { float: left; }
+
+.ear2 { float: right; }
+
+.eyes
+{
+	width: 400px;
+	height: 300px;
+	margin: auto;
+	padding-top: 20px;
+	margin-left: 52px;
+}
+
+.eye
+{
+	height: 300px;
+	width: 200px;
+	float: left;
+	background: #FBB479;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	position: relative;
+	z-index: 3;
+}
+
+.eye1
+{
+	margin-left: 20px;
+	/*transform*/
+	-webkit-transform: scale(1) rotate(10deg) translate(0px, 0px) skew(0deg, 0deg);
+	-moz-transform: scale(1) rotate(10deg) translate(0px, 0px) skew(0deg, 0deg);
+	-ms-transform: scale(1) rotate(10deg) translate(0px, 0px) skew(0deg, 0deg);
+	-o-transform: scale(1) rotate(10deg) translate(0px, 0px) skew(0deg, 0deg);
+	transform: scale(1) rotate(10deg) translate(0px, 0px) skew(0deg, 0deg);
+}
+
+.eye2
+{
+	margin-left: -40px;
+	/*transform*/
+	-webkit-transform: scale(1) rotate(-10deg) translate(0px, 0px) skew(0deg, 0deg);
+	-moz-transform: scale(1) rotate(-10deg) translate(0px, 0px) skew(0deg, 0deg);
+	-ms-transform: scale(1) rotate(-10deg) translate(0px, 0px) skew(0deg, 0deg);
+	-o-transform: scale(1) rotate(-10deg) translate(0px, 0px) skew(0deg, 0deg);
+	transform: scale(1) rotate(-10deg) translate(0px, 0px) skew(0deg, 0deg);
+}
+
+.corona
+{
+	width: 50px;
+	height: 190px;
+	background: #FFF;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	z-index: 4;
+	border: 5px solid #000;
+	/*box-shadow*/
+	-webkit-box-shadow: 0 0 5px 0 #000;
+	-moz-box-shadow: 0 0 5px 0 #000;
+	box-shadow: 0 0 5px 0 #000;
+}
+
+.corona1, .corona2 { margin-top: 80px; }
+
+.corona1 { margin-left: 130px; }
+
+.corona2 { margin-left: 210px; }
+
+.adjust
+{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background: #FBB479;
+	margin-left: 175px;
+	margin-top: 220px;
+	z-index: 1;
+}
+
+.iris
+{
+	background: #000;
+	width: 35px;
+	height: 80px;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	/*box-shadow*/
+	-webkit-box-shadow: 0 0 5px 0 #000;
+	-moz-box-shadow: 0 0 5px 0 #000;
+	box-shadow: 0 0 5px 0 #000;
+}
+
+.iris1, .iris2 { margin-top: 105px; }
+
+.iris1 { float: right; }
+
+.iris2 { float: left; }
+
+.eye-divider
+{
+	width: 200px;
+	height: 150px;
+	background: #000;
+	position: relative;
+	z-index: 4;
+	margin: auto;
+	margin-top: 263px;
+	padding-top: 2px;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.eye-divider-overlap
+{
+	width: 220px;
+	height: 150px;
+	background: #FBB479;
+	position: relative;
+	z-index: 5;
+	margin: auto;
+	margin-top: 5px;
+	margin-left: -10px;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.smile-background
+{
+	background: #000;
+	width: 505px;
+	padding-top: 5px;
+	height: 300px;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	margin-left: -2px;
+	margin-top: -90px;
+	position: relative;
+	z-index: 0;
+}
+
+.nose
+{
+	width: 130px;
+	height: 70px;
+	background: #000;
+	margin-left: 185px;
+	margin-top: -10px;
+	position: absolute;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	z-index: 6;
+}
+
+.smile-circles
+{
+	background: red;
+	height: 300px;
+	width: 200px;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #FBB479;
+	float: left;
+	margin-top: -60px;
+}
+
+.smile-circles-1
+{
+	margin-left: 50px;
+	float: left;
+	/*transform*/
+	-webkit-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-moz-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-ms-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-o-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+}
+
+.smile-circles-2
+{
+	margin-right: 50px;
+	float: right;
+	/*transform*/
+	-webkit-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-moz-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-ms-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-o-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+}
+
+.smile
+{
+	width: 520px;
+	height: 630px;
+	background: transparent;
+	position: relative;
+	z-index: 10;
+	margin: auto;
+	margin-top: -730px;
+	margin-left: -20px;
+	border: 5px solid;
+	/*border-radius*/
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	border-color: transparent transparent #000 transparent;
+}
+
+.dimples, .dimple-cover
+{
+	height: 200px;
+	width: 150px;
+	background: #000;
+	float: left;
+	-webkit-border-radius: 50%;
+	overflow: hidden;
+	position: absolute
+}
+
+.dimple-1
+{
+	float: left;
+	margin-top: -140px;
+	margin-left: 68px;
+	/*transform*/
+	-webkit-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-moz-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-ms-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-o-transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+	transform: scale(1) rotate(-60deg) translate(1px, 1px) skew(0deg, 0deg);
+}
+
+.dimple-2
+{
+	float: right;
+	margin-left: 270px;
+	margin-top: -140px;
+	/*transform*/
+	-webkit-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-moz-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-ms-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	-o-transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+	transform: scale(1) rotate(60deg) translate(1px, 1px) skew(0deg, 0deg);
+}
+
+.dimple-cover
+{
+	width: 250px;
+	margin-left: -50px;
+	background: #FBB479;
+	margin-top: 10px
+}

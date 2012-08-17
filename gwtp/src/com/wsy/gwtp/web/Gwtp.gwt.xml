@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module rename-to='gwtp'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name="com.google.gwt.uibinder.GinUiBinder" /> <!-- GinUiBinder allows injecting widgets in UiBinder -->
+	<inherits name='com.google.gwt.inject.Inject' />
+	<inherits name='com.google.gwt.resources.Resources' />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<!-- Other module inherits -->
+	<inherits name='com.gwtplatform.mvp.Mvp' />
+	<inherits name='com.gwtplatform.dispatch.Dispatch' />
+
+	<inherits name='com.github.gwtbootstrap.Bootstrap' />
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name='com.sencha.gxt.chart.Chart' />
+	<!-- inherits name="com.sencha.gwt.uibinder.UiBinder" / -->
+
+	<inherits name='com.google.web.bindery.requestfactory.RequestFactory' />
+
+
+	<!-- set responsive design -->
+	<set-property name="bootstrap.responsiveDesign" value="true" />
+
+	<replace-with
+		class="com.wsy.gwtp.web.client.resources.CustomConfigurator">
+		<when-type-is class="com.github.gwtbootstrap.client.ui.config.Configurator" />
+	</replace-with>
+
+	<public path="client/resources">
+		<exclude name="**/*.java" />
+		<exclude name="**/*.class" />
+	</public>
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.wsy.gwtp.web.client.Gwtp' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<define-configuration-property name='gin.ginjector'
+		is-multi-valued='false' />
+	<set-configuration-property name='gin.ginjector'
+		value='com.wsy.gwtp.web.client.gin.ClientGinjector' />
+
+	<stylesheet src="css/gxt-resources.css" />
+
+</module>

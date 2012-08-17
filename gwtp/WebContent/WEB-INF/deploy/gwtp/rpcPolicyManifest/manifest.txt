@@ -1,0 +1,4 @@
+# Module gwtp
+# RPC service class, partial path of RPC policy file
+com.gwtplatform.dispatch.shared.DispatchService, 2959C35905E4C52EDC19CF95A7D62F37.gwt.rpc
+com.google.gwt.logging.shared.RemoteLoggingService, C2E80430408C312ED8F64E1BCFC8CFB0.gwt.rpc

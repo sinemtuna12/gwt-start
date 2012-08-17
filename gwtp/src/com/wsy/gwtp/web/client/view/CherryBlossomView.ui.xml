@@ -1,0 +1,255 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:style>
+		
+	</ui:style>
+
+	<g:HTMLPanel>
+		<div id="marco">
+			<div class="rama1">
+				<div class="rama2">
+					<div class="rama21">
+						<div class="rama211">
+							<div class="flor r21f4">
+								<div class="centro"></div>
+								<div class="hoja h1"></div>
+								<div class="hoja h2"></div>
+								<div class="hoja h3"></div>
+								<div class="hoja h4"></div>
+							</div>
+						</div>
+						<div class="flor r21f1">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r21f2">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r21f3">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+					</div>
+					<div class="rama22">
+						<div class="flor r22f1">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r22f2">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r22f3">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r22f4">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+					</div>
+					<div class="rama23">
+						<div class="flor r23f1">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r23f2">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r23f3">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r23f4">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+					</div>
+					<div class="flor r2f1">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+					<div class="flor r2f2">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+					<div class="flor r2f3">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+					<div class="flor r2f4">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+					<div class="flor r2f5">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+				</div>
+				<div class="rama3">
+					<div class="rama31">
+						<div class="flor r3f1">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r3f2">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r3f3">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+					</div>
+					<div class="flor r3f4">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+					<div class="flor r3f5">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+				</div>
+				<div class="rama4">
+					<div class="rama41">
+						<div class="flor r4f1">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+						<div class="flor r4f2">
+							<div class="centro"></div>
+							<div class="hoja h1"></div>
+							<div class="hoja h2"></div>
+							<div class="hoja h3"></div>
+							<div class="hoja h4"></div>
+						</div>
+					</div>
+					<div class="flor r4f3">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+					<div class="flor r4f4">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+				</div>
+				<div class="rama5">
+					<div class="flor">
+						<div class="centro"></div>
+						<div class="hoja h1"></div>
+						<div class="hoja h2"></div>
+						<div class="hoja h3"></div>
+						<div class="hoja h4"></div>
+					</div>
+				</div>
+				<div class="flor r1f1">
+					<div class="centro"></div>
+					<div class="hoja h1"></div>
+					<div class="hoja h2"></div>
+					<div class="hoja h3"></div>
+					<div class="hoja h4"></div>
+				</div>
+				<div class="flor r1f2">
+					<div class="centro"></div>
+					<div class="hoja h1"></div>
+					<div class="hoja h2"></div>
+					<div class="hoja h3"></div>
+					<div class="hoja h4"></div>
+				</div>
+				<div class="flor r1f3">
+					<div class="centro"></div>
+					<div class="hoja h1"></div>
+					<div class="hoja h2"></div>
+					<div class="hoja h3"></div>
+					<div class="hoja h4"></div>
+				</div>
+			</div>
+			<div id="textos">
+				<p>The hard and the stiff will be broken.</p>
+				<p>The soft and supple will prevail.</p>
+				<p>
+					<small>- Tao Te Ching -</small>
+				</p>
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

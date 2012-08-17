@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+
+	<ui:style src="../resources/css/mickey.css" />
+		
+	<g:HTMLPanel>
+		<div id="wrap">
+			<div class="{style.face}">
+				<!--ears -->
+				<div class="{style.ears}">
+					<div class="{style.ear} {style.ear1}"></div>
+					<div class="{style.ear} {style.ear2}"></div>
+				</div>
+				<!--ears -->
+				<!--eyes -->
+				<div class="{style.eyes}">
+					<div class="{style.adjust}"></div>
+					<div class="{style.eye1} {style.eye}" >
+					</div>
+					<div class="{style.corona1} {style.corona}">
+						<div class="{style.iris1} {style.iris}"></div>
+					</div>
+					<div class="{style.eye} {style.eye2}">
+					</div>
+					<div class="{style.corona2} {style.corona}">
+						<div class="{style.iris2} {style.iris}"></div>
+					</div>
+					<div class="{style.eye-divider}">
+						<div class="{style.eye-divider-overlap}"></div>
+					</div>
+				</div>
+				<!--eyes -->
+				<!--smile -->
+				<div class="{style.nose}"></div>
+				<div class="{style.smile-background}">
+					<div class="{style.smile-circles-1} {style.smile-circles}"></div>
+					<div class="{style.smile-circles-2} {style.smile-circles}"></div>
+				</div>
+				<div class="{style.smile}">
+				</div>
+				<!--smile -->
+				<!--dimples -->
+				<div class="{style.dimples} {style.dimple-1}">
+					<div class="{style.dimple-cover}"></div>
+				</div>
+				<div class="{style.dimples} {style.dimple-2}">
+					<div class="{style.dimple-cover}"></div>
+				</div>
+				<!--dimples -->
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,152 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+	<ui:style>
+		/* general styles for demo ******************/
+	</ui:style>
+	<g:HTMLPanel>
+
+		<h1>CSS3 Charts</h1>
+		<h4>
+			No JavaScript, no images, just pure CSS code.
+			<span class="red_info">Optimized for Firefox. </span>
+			<br />
+			<span class="blue_info">Hint: try to hover over the charts! You may also
+				reload the page to see the enter animation.</span>
+		</h4>
+		<br />
+
+
+
+		<div class="user_outer">
+			<div class="bar_chart w30">
+				<span class="scale h10">10 -</span>
+				<span class="scale h20">20 -</span>
+				<span class="scale h30">30 -</span>
+				<span class="scale h40">40 -</span>
+				<span class="scale h50">50 -</span>
+				<span class="scale h60">60 -</span>
+				<span class="scale h70">70 -</span>
+				<span class="scale h80">80 -</span>
+				<span class="scale h90">90 - </span>
+				<span class="scale h100">100 -</span>
+
+				<div class="legend">
+					<span class="square turquoise"></span>
+					winter
+					<br />
+					<span class="square blue_light"></span>
+					spring
+					<br />
+					<span class="square purple"></span>
+					summer
+					<br />
+					<span class="square pink"></span>
+					autumn
+					<br />
+				</div>
+				<span class="space"></span>
+
+				<dl>
+					<dt>January</dt>
+					<dd class="turquoise v50">
+						<span>50</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>February</dt>
+					<dd class="turquoise v43">
+						<span>43</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>March</dt>
+					<dd class="turquoise v57">
+						<span>57</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>April</dt>
+					<dd class="blue_light v45">
+						<span>45</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>May</dt>
+					<dd class="blue_light v35">
+						<span>35</span>
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>June</dt>
+					<dd class="blue_light v30">
+						<span>30</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>July</dt>
+					<dd class="purple v30">
+						<span>30</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>August</dt>
+					<dd class="purple v35">
+						<span>35</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>September</dt>
+					<dd class="purple v25">
+						<span>25</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>October</dt>
+					<dd class="pink v33">
+						<span>33</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>November</dt>
+					<dd class="pink v53">
+						<span>53</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>December</dt>
+					<dd class="pink v64">
+						<span>64</span>
+					</dd>
+				</dl>
+
+
+			</div>
+
+			<div class="pie_outer">
+
+				<div class="circle">
+					<div class="triangle summer"></div>
+					<div class="triangle autumn"></div>
+					<div class="triangle autumn2"></div>
+					<div class="triangle winter"></div>
+					<div class="triangle winter2"></div>
+					<div class="triangle spring"></div>
+					<div class="center"></div>
+				</div>
+
+				<span class="percent nobg purple">18%</span>
+				<span class="percent nobg pink">30%</span>
+				<span class="percent nobg turquoise">30%</span>
+				<span class="percent nobg blue_light">22%</span>
+
+				<div class="center_circle"></div>
+
+			</div>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>
