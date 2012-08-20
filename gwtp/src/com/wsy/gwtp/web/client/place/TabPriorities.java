@@ -32,7 +32,10 @@ public interface TabPriorities {
 	public static final int simpleCSS = 2;
 	public static final int clockDemo = 3;
 	public static final int mickey = 4;
-	
+	public static final int counterDemo = 5;
+	public static final int animationClock = 6;
+	public static final int iconMenu = 7;
+
 	public static final int cellRenderer = 0;
 
 	
