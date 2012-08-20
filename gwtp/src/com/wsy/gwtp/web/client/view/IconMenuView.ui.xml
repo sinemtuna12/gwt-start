@@ -1,0 +1,78 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' ui:generateFormat='com.google.gwt.i18n.rebind.format.PropertiesFormat'
+	ui:generateKeys='com.google.gwt.i18n.rebind.keygen.MD5KeyGenerator'
+	ui:generateLocales='default'>
+	<ui:with type="com.wsy.gwtp.web.client.resources.ImageResources" field="imgs"/>
+	<g:HTMLPanel>
+		<ul class="menu">
+			<li class="p1">
+				<a href="#">Icon #1</a>
+			</li>
+			<li class="p2">
+				<a href="#">Icon #2</a>
+			</li>
+			<li class="p3">
+				<a href="#">Icon #3</a>
+			</li>
+			<li class="p4">
+				<a href="#">Icon #4</a>
+			</li>
+			<li class="p5">
+				<a href="#">Icon #5</a>
+			</li>
+			<li class="p6">
+				<a href="#">Icon #6</a>
+			</li>
+			<li class="p7">
+				<a href="#">Icon #7</a>
+			</li>
+			<li class="p8">
+				<a href="#">Icon #8</a>
+			</li>
+			<li class="icons">
+				<b class="m1">
+					<!-- <g:Image resource="{imgs.one"></g:Image> -->
+					<img src="img/one.png"/>
+					<span>Icon #1</span>
+				</b>
+				<b class="m2">
+					<img src="img/two.png"/>
+					<span>Icon #2</span>
+				</b>
+				<b class="m3">
+					<img src="img/three.png"/>
+					<span>Icon #3</span>
+				</b>
+				<b class="m4">
+					<img src="img/four.png"/>
+					<span>Icon #4</span>
+				</b>
+				<b class="m5">
+					<!-- <g:Image resource="{imgs.five}"></g:Image> -->
+					<img src="img/five.png"/>
+					<span>Icon #5</span>
+				</b>
+				<b class="m6">
+					<!--  <g:Image resource="{imgs.six}"></g:Image>-->
+					<img src="img/six.png"/>
+					<span>Icon #6</span>
+				</b>
+				<b class="m7">
+					<img src="img/seven.png"/>
+					<span>Icon #7</span>
+				</b>
+				<b class="m8">
+					<img src="img/eight.png"/>
+					<span>Icon #8</span>
+				</b>
+			</li>
+		</ul>
+		<h1>
+			For IE7+, Firefox, Safari, Chrome and Opera
+			<br />
+			Animation not available in IE7, 8 and 9
+		</h1>
+	</g:HTMLPanel>
+</ui:UiBinder>
