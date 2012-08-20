@@ -8,32 +8,36 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.wsy.gwtp.web.client.core.AboutUSPresenter;
+import com.wsy.gwtp.web.client.core.BoostrapPresenter;
+import com.wsy.gwtp.web.client.core.CSS3ChartPresenter;
+import com.wsy.gwtp.web.client.core.CellRendererPresenter;
+import com.wsy.gwtp.web.client.core.CherryBlossomPresenter;
+import com.wsy.gwtp.web.client.core.ClockDemoPresenter;
+import com.wsy.gwtp.web.client.core.CounterDemoPresenter;
 import com.wsy.gwtp.web.client.core.CssPresenter;
 import com.wsy.gwtp.web.client.core.FilterGridPresenter;
 import com.wsy.gwtp.web.client.core.GWTPresenter;
 import com.wsy.gwtp.web.client.core.GXTTabPresenter;
+import com.wsy.gwtp.web.client.core.GridSystemPresenter;
 import com.wsy.gwtp.web.client.core.HomePresenter;
 import com.wsy.gwtp.web.client.core.JsonGridPresenter;
 import com.wsy.gwtp.web.client.core.MainPagePresenter;
+import com.wsy.gwtp.web.client.core.MickeyPresenter;
 import com.wsy.gwtp.web.client.core.RemoteFilterGridPresenter;
 import com.wsy.gwtp.web.client.core.RequestFactoryGridPresenter;
+import com.wsy.gwtp.web.client.core.RowExpandGridPresenter;
+import com.wsy.gwtp.web.client.core.SimpleCSSPresenter;
 import com.wsy.gwtp.web.client.core.TooltipChartPresenter;
 import com.wsy.gwtp.web.client.ui.RoundTabPanel;
 import com.wsy.gwtp.web.client.ui.SimpleTabPanel;
 import com.wsy.gwtp.web.client.view.MainMenu;
-import com.wsy.gwtp.web.client.core.RowExpandGridPresenter;
-import com.wsy.gwtp.web.client.core.BoostrapPresenter;
-import com.wsy.gwtp.web.client.core.GridSystemPresenter;
-import com.wsy.gwtp.web.client.core.CherryBlossomPresenter;
-import com.wsy.gwtp.web.client.core.CSS3ChartPresenter;
-import com.wsy.gwtp.web.client.core.SimpleCSSPresenter;
-import com.wsy.gwtp.web.client.core.ClockDemoPresenter;
-import com.wsy.gwtp.web.client.core.MickeyPresenter;
-import com.wsy.gwtp.web.client.core.CellRendererPresenter;
+import com.wsy.gwtp.web.client.core.IconMenuPresenter;
 
 @GinModules({ DispatchAsyncModule.class, ClientModule.class })
 public interface ClientGinjector extends Ginjector {
 
+//	BrowserCheckGatekeeper getBrowserCheckGatekeeper();
+	
 	EventBus getEventBus();
 
 	PlaceManager getPlaceManager();
@@ -83,4 +87,10 @@ public interface ClientGinjector extends Ginjector {
 	AsyncProvider<GWTPresenter> getGWTPresenter();
 
 	AsyncProvider<CellRendererPresenter> getCellRendererPresenter();
+	
+	AsyncProvider<CounterDemoPresenter> getCounterDemoPresenter();
+
+	AsyncProvider<IconMenuPresenter> getIconMenuPresenter();
+	
+//	AsyncProvider<AnimationClockPresenter> getAnimationClockPresenter();
 }

@@ -1,0 +1,623 @@
+
+.title {
+	margin: 80px auto 0;
+	text-align: center;
+	font-size: 54px;
+	width: 400px;
+	height: 64px;
+}
+.title:hover {
+	-moz-animation: titleSpin 5s 1 linear;
+	-webkit-animation: titleSpin 5s 1 linear;
+	animation: titleSpin 5s 1 linear;
+}
+@-moz-keyframes titleSpin {
+	0% {
+		-moz-transform: scale(1) rotate(0deg);
+	}
+	50% {
+		-moz-transform: scale(1.5) rotate(180deg);
+	}
+	100% {
+		-moz-transform: scale(1) rotate(360deg);
+	}
+}
+@-webkit-keyframes titleSpin {
+	0% {
+		-webkit-transform: scale(1) rotate(0deg);
+	}
+	50% {
+		-webkit-transform: scale(1.5) rotate(180deg);
+	}
+	100% {
+		-webkit-transform: scale(1) rotate(360deg);
+	}
+}
+@keyframes titleSpin {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+  }
+  100% {
+	transform: scale(1) rotate(360deg);
+  }
+}
+.clockFrame {
+	width: 400px;
+	height: 400px;
+	-moz-border-radius: 400px;
+	-webkit-border-radius: 400px;
+	border-radius: 400px;
+	position: relative;
+	z-index: 1;
+}
+.clockFrameOuter:hover {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.clockFrameOuter {
+	margin: 160px auto 0;
+	border: 20px solid transparent;
+	-moz-box-shadow: 0 0 60px #000;
+	-webkit-box-shadow: 0 0 60px #000;
+	box-shadow: 0 0 60px #000;
+}
+.clockFrameInner {
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	color: #000;
+	border: 20px #000 solid;
+	-moz-border-radius: 400px;
+	-webkit-border-radius: 400px;
+	border-radius: 400px;
+	-moz-box-shadow:    inset 0 0 40px #000;
+	-webkit-box-shadow: inset 0 0 40px #000;
+	box-shadow:         inset 0 0 40px #000;
+}
+.clockCenter {
+	height: 2px;
+	width: 2px;
+	border: 8px solid #F00;
+	-moz-border-radius: 16px;
+	-webkit-border-radius: 16px;
+	border-radius: 16px;
+	top: 50%;
+	left: 50%;
+	margin: -8px 0 0 -8px;
+	position: absolute;
+	background: #F00;
+}
+.clockIndicator {
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	width: 400px;
+	height: 8px;
+}
+.clockMarker, .clockMarkerText {
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	text-align: center;
+	background: black;
+}
+.clockMarker {
+	width: 4px;
+	height: 20px;
+	margin: -9px 0 0 -2px;
+}
+.clockMarkerText {
+	font-size: 24px;
+	line-height: 24px;
+	background: transparent;
+	width: 24px;
+	margin: -20px 0 0 -12px;
+	font-style: italic;
+	font-weight: bold;
+}
+.clockMarkerMin {
+	width: 2px;
+	height: 12px;
+	margin: -6px 0 0 -1px;
+}
+.clock0deg.clockMarkerText {
+	-moz-transform: translate(0, -153px);
+	-webkit-transform: translate(0, -153px);
+	transform: translate(0, -153px);
+}
+.clock0deg {
+	-moz-transform: rotate(0deg) translate(0px, -185px);
+	-webkit-transform: rotate(0deg) translate(0px, -185px);
+	transform: rotate(0deg) translate(0px, -185px);
+}
+.clock6deg {
+	-moz-transform: rotate(6deg) translate(0px, -185px);
+	-webkit-transform: rotate(6deg) translate(0px, -185px);
+	transform: rotate(6deg) translate(0px, -185px);
+}
+.clock12deg {
+	-moz-transform: rotate(12deg) translate(0px, -185px);
+	-webkit-transform: rotate(12deg) translate(0px, -185px);
+	transform: rotate(12deg) translate(0px, -185px);
+}
+.clock18deg {
+	-moz-transform: rotate(18deg) translate(0px, -185px);
+	-webkit-transform: rotate(18deg) translate(0px, -185px);
+	transform: rotate(18deg) translate(0px, -185px);
+}
+.clock24deg {
+	-moz-transform: rotate(24deg) translate(0px, -185px);
+	-webkit-transform: rotate(24deg) translate(0px, -185px);
+	transform: rotate(24deg) translate(0px, -185px);
+}
+.clock30deg.clockMarkerText {
+	-moz-transform: translate(0, -129px);
+	-webkit-transform: translate(0, -129px);
+	transform: translate(0, -129px);
+	left: 70%;
+}
+.clock30deg {
+	-moz-transform: rotate(30deg) translate(0px, -185px);
+	-webkit-transform: rotate(30deg) translate(0px, -185px);
+	transform: rotate(30deg) translate(0px, -185px);
+}
+.clock36deg {
+	-moz-transform: rotate(36deg) translate(0px, -185px);
+	-webkit-transform: rotate(36deg) translate(0px, -185px);
+	transform: rotate(36deg) translate(0px, -185px);
+}
+.clock42deg {
+	-moz-transform: rotate(42deg) translate(0px, -185px);
+	-webkit-transform: rotate(42deg) translate(0px, -185px);
+	transform: rotate(42deg) translate(0px, -185px);
+}
+.clock48deg {
+	-moz-transform: rotate(48deg) translate(0px, -185px);
+	-webkit-transform: rotate(48deg) translate(0px, -185px);
+	transform: rotate(48deg) translate(0px, -185px);
+}
+.clock54deg {
+	-moz-transform: rotate(54deg) translate(0px, -185px);
+	-webkit-transform: rotate(54deg) translate(0px, -185px);
+	transform: rotate(54deg) translate(0px, -185px);
+}
+.clock60deg.clockMarkerText {
+	-moz-transform: translate(0, -72px);
+	-webkit-transform: translate(0, -72px);
+	transform: translate(0, -72px);
+	left: 85%;
+}
+.clock60deg {
+	-moz-transform: rotate(60deg) translate(0px, -185px);
+	-webkit-transform: rotate(60deg) translate(0px, -185px);
+	transform: rotate(60deg) translate(0px, -185px);
+}
+.clock66deg {
+	-moz-transform: rotate(66deg) translate(0px, -185px);
+	-webkit-transform: rotate(66deg) translate(0px, -185px);
+	transform: rotate(66deg) translate(0px, -185px);
+}
+.clock72deg {
+	-moz-transform: rotate(72deg) translate(0px, -185px);
+	-webkit-transform: rotate(72deg) translate(0px, -185px);
+	transform: rotate(72deg) translate(0px, -185px);
+}
+.clock78deg {
+	-moz-transform: rotate(78deg) translate(0px, -185px);
+	-webkit-transform: rotate(78deg) translate(0px, -185px);
+	transform: rotate(78deg) translate(0px, -185px);
+}
+.clock84deg {
+	-moz-transform: rotate(84deg) translate(0px, -185px);
+	-webkit-transform: rotate(84deg) translate(0px, -185px);
+	transform: rotate(84deg) translate(0px, -185px);
+}
+.clock90deg.clockMarkerText {
+	-moz-transform: translate(0, 12px);
+	-webkit-transform: translate(0, 12px);
+	transform: translate(0, 12px);
+	left: 91%;
+}
+.clock90deg {
+	-moz-transform: rotate(90deg) translate(0px, -185px);
+	-webkit-transform: rotate(90deg) translate(0px, -185px);
+	transform: rotate(90deg) translate(0px, -185px);
+}
+.clock96deg {
+	-moz-transform: rotate(96deg) translate(0px, -185px);
+	-webkit-transform: rotate(96deg) translate(0px, -185px);
+	transform: rotate(96deg) translate(0px, -185px);
+}
+.clock102deg {
+	-moz-transform: rotate(102deg) translate(0px, -185px);
+	-webkit-transform: rotate(102deg) translate(0px, -185px);
+	transform: rotate(102deg) translate(0px, -185px);
+}
+.clock108deg {
+	-moz-transform: rotate(108deg) translate(0px, -185px);
+	-webkit-transform: rotate(108deg) translate(0px, -185px);
+	transform: rotate(108deg) translate(0px, -185px);
+}
+.clock114deg {
+	-moz-transform: rotate(114deg) translate(0px, -185px);
+	-webkit-transform: rotate(114deg) translate(0px, -185px);
+	transform: rotate(114deg) translate(0px, -185px);
+}
+.clock120deg.clockMarkerText {
+	-moz-transform: translate(0, 91px);
+	-webkit-transform: translate(0, 91px);
+	transform: translate(0, 91px);
+	left: 85%;
+}
+.clock120deg {
+	-moz-transform: rotate(120deg) translate(0px, -185px);
+	-webkit-transform: rotate(120deg) translate(0px, -185px);
+	transform: rotate(120deg) translate(0px, -185px);
+}
+.clock126deg {
+	-moz-transform: rotate(126deg) translate(0px, -185px);
+	-webkit-transform: rotate(126deg) translate(0px, -185px);
+	transform: rotate(126deg) translate(0px, -185px);
+}
+.clock132deg {
+	-moz-transform: rotate(132deg) translate(0px, -185px);
+	-webkit-transform: rotate(132deg) translate(0px, -185px);
+	transform: rotate(132deg) translate(0px, -185px);
+}
+.clock138deg {
+	-moz-transform: rotate(138deg) translate(0px, -185px);
+	-webkit-transform: rotate(138deg) translate(0px, -185px);
+	transform: rotate(138deg) translate(0px, -185px);
+}
+.clock144deg {
+	-moz-transform: rotate(144deg) translate(0px, -185px);
+	-webkit-transform: rotate(144deg) translate(0px, -185px);
+	transform: rotate(144deg) translate(0px, -185px);
+}
+.clock150deg.clockMarkerText {
+	-moz-transform: translate(0, 149px);
+	-webkit-transform: translate(0, 149px);
+	transform: translate(0, 149px);
+	left: 71%;
+}
+.clock150deg {
+	-moz-transform: rotate(150deg) translate(0px, -185px);
+	-webkit-transform: rotate(150deg) translate(0px, -185px);
+	transform: rotate(150deg) translate(0px, -185px);
+}
+.clock156deg {
+	-moz-transform: rotate(156deg) translate(0px, -185px);
+	-webkit-transform: rotate(156deg) translate(0px, -185px);
+	transform: rotate(156deg) translate(0px, -185px);
+}
+.clock162deg {
+	-moz-transform: rotate(162deg) translate(0px, -185px);
+	-webkit-transform: rotate(162deg) translate(0px, -185px);
+	transform: rotate(162deg) translate(0px, -185px);
+}
+.clock168deg {
+	-moz-transform: rotate(168deg) translate(0px, -185px);
+	-webkit-transform: rotate(168deg) translate(0px, -185px);
+	transform: rotate(168deg) translate(0px, -185px);
+}
+.clock174deg {
+	-moz-transform: rotate(174deg) translate(0px, -185px);
+	-webkit-transform: rotate(174deg) translate(0px, -185px);
+	transform: rotate(174deg) translate(0px, -185px);
+}
+.clock180deg.clockMarkerText {
+	-moz-transform: translate(0, 172px);
+	-webkit-transform: translate(0, 172px);
+	transform: translate(0, 172px);
+}
+.clock180deg {
+	-moz-transform: rotate(180deg) translate(0px, -185px);
+	-webkit-transform: rotate(180deg) translate(0px, -185px);
+	transform: rotate(180deg) translate(0px, -185px);
+}
+.clock186deg {
+	-moz-transform: rotate(186deg) translate(0px, -185px);
+	-webkit-transform: rotate(186deg) translate(0px, -185px);
+	transform: rotate(186deg) translate(0px, -185px);
+}
+.clock192deg {
+	-moz-transform: rotate(192deg) translate(0px, -185px);
+	-webkit-transform: rotate(192deg) translate(0px, -185px);
+	transform: rotate(192deg) translate(0px, -185px);
+}
+.clock198deg {
+	-moz-transform: rotate(198deg) translate(0px, -185px);
+	-webkit-transform: rotate(198deg) translate(0px, -185px);
+	transform: rotate(198deg) translate(0px, -185px);
+}
+.clock204deg {
+	-moz-transform: rotate(204deg) translate(0px, -185px);
+	-webkit-transform: rotate(204deg) translate(0px, -185px);
+	transform: rotate(204deg) translate(0px, -185px);
+}
+.clock210deg.clockMarkerText {
+	-moz-transform: translate(0, 149px);
+	-webkit-transform: translate(0, 149px);
+	transform: translate(0, 149px);
+	left: 30%
+}
+.clock210deg {
+	-moz-transform: rotate(210deg) translate(0px, -185px);
+	-webkit-transform: rotate(210deg) translate(0px, -185px);
+	transform: rotate(210deg) translate(0px, -185px);
+}
+.clock216deg {
+	-moz-transform: rotate(216deg) translate(0px, -185px);
+	-webkit-transform: rotate(216deg) translate(0px, -185px);
+	transform: rotate(216deg) translate(0px, -185px);
+}
+.clock222deg {
+	-moz-transform: rotate(222deg) translate(0px, -185px);
+	-webkit-transform: rotate(222deg) translate(0px, -185px);
+	transform: rotate(222deg) translate(0px, -185px);
+}
+.clock228deg {
+	-moz-transform: rotate(228deg) translate(0px, -185px);
+	-webkit-transform: rotate(228deg) translate(0px, -185px);
+	transform: rotate(228deg) translate(0px, -185px);
+}
+.clock234deg {
+	-moz-transform: rotate(234deg) translate(0px, -185px);
+	-webkit-transform: rotate(234deg) translate(0px, -185px);
+	transform: rotate(234deg) translate(0px, -185px);
+}
+.clock240deg.clockMarkerText {
+	-moz-transform: translate(0, 91px);
+	-webkit-transform: translate(0, 91px);
+	transform: translate(0, 91px);
+	left: 15%;
+}
+.clock240deg {
+	-moz-transform: rotate(240deg) translate(0px, -185px);
+	-webkit-transform: rotate(240deg) translate(0px, -185px);
+	transform: rotate(240deg) translate(0px, -185px);
+}
+.clock246deg {
+	-moz-transform: rotate(246deg) translate(0px, -185px);
+	-webkit-transform: rotate(246deg) translate(0px, -185px);
+	transform: rotate(246deg) translate(0px, -185px);
+}
+.clock252deg {
+	-moz-transform: rotate(252deg) translate(0px, -185px);
+	-webkit-transform: rotate(252deg) translate(0px, -185px);
+	transform: rotate(252deg) translate(0px, -185px);
+}
+.clock258deg {
+	-moz-transform: rotate(258deg) translate(0px, -185px);
+	-webkit-transform: rotate(258deg) translate(0px, -185px);
+	transform: rotate(258deg) translate(0px, -185px);
+}
+.clock264deg {
+	-moz-transform: rotate(264deg) translate(0px, -185px);
+	-webkit-transform: rotate(264deg) translate(0px, -185px);
+	transform: rotate(264deg) translate(0px, -185px);
+}
+.clock270deg.clockMarkerText {
+	-moz-transform: translate(0, 12px);
+	-webkit-transform: translate(0, 12px);
+	transform: translate(0, 12px);
+	left: 9%;
+}
+.clock270deg {
+	-moz-transform: rotate(270deg) translate(0px, -185px);
+	-webkit-transform: rotate(270deg) translate(0px, -185px);
+	transform: rotate(270deg) translate(0px, -185px);
+}
+.clock276deg {
+	-moz-transform: rotate(276deg) translate(0px, -185px);
+	-webkit-transform: rotate(276deg) translate(0px, -185px);
+	transform: rotate(276deg) translate(0px, -185px);
+}
+.clock282deg {
+	-moz-transform: rotate(282deg) translate(0px, -185px);
+	-webkit-transform: rotate(282deg) translate(0px, -185px);
+	transform: rotate(282deg) translate(0px, -185px);
+}
+.clock288deg {
+	-moz-transform: rotate(288deg) translate(0px, -185px);
+	-webkit-transform: rotate(288deg) translate(0px, -185px);
+	transform: rotate(288deg) translate(0px, -185px);
+}
+.clock294deg {
+	-moz-transform: rotate(294deg) translate(0px, -185px);
+	-webkit-transform: rotate(294deg) translate(0px, -185px);
+	transform: rotate(294deg) translate(0px, -185px);
+}
+.clock300deg.clockMarkerText {
+	-moz-transform: translate(0, -72px);
+	-webkit-transform: translate(0, -72px);
+	transform: translate(0, -72px);
+	left: 15%;
+}
+.clock300deg {
+	-moz-transform: rotate(300deg) translate(0px, -185px);
+	-webkit-transform: rotate(300deg) translate(0px, -185px);
+	transform: rotate(300deg) translate(0px, -185px);
+}
+.clock306deg {
+	-moz-transform: rotate(306deg) translate(0px, -185px);
+	-webkit-transform: rotate(306deg) translate(0px, -185px);
+	transform: rotate(306deg) translate(0px, -185px);
+}
+.clock312deg {
+	-moz-transform: rotate(312deg) translate(0px, -185px);
+	-webkit-transform: rotate(312deg) translate(0px, -185px);
+	transform: rotate(312deg) translate(0px, -185px);
+}
+.clock318deg {
+	-moz-transform: rotate(318deg) translate(0px, -185px);
+	-webkit-transform: rotate(318deg) translate(0px, -185px);
+	transform: rotate(318deg) translate(0px, -185px);
+}
+.clock324deg {
+	-moz-transform: rotate(324deg) translate(0px, -185px);
+	-webkit-transform: rotate(324deg) translate(0px, -185px);
+	transform: rotate(324deg) translate(0px, -185px);
+}
+.clock330deg.clockMarkerText {
+	-moz-transform: translate(0, -129px);
+	-webkit-transform: translate(0, -129px);
+	transform: translate(0, -129px);
+	left: 30%;
+}
+.clock330deg {
+	-moz-transform: rotate(330deg) translate(0px, -185px);
+	-webkit-transform: rotate(330deg) translate(0px, -185px);
+	transform: rotate(330deg) translate(0px, -185px);
+}
+.clock336deg {
+	-moz-transform: rotate(336deg) translate(0px, -185px);
+	-webkit-transform: rotate(336deg) translate(0px, -185px);
+	transform: rotate(336deg) translate(0px, -185px);
+}
+.clock342deg {
+	-moz-transform: rotate(342deg) translate(0px, -185px);
+	-webkit-transform: rotate(342deg) translate(0px, -185px);
+	transform: rotate(342deg) translate(0px, -185px);
+}
+.clock348deg {
+	-moz-transform: rotate(348deg) translate(0px, -185px);
+	-webkit-transform: rotate(348deg) translate(0px, -185px);
+	transform: rotate(348deg) translate(0px, -185px);
+}
+.clock354deg {
+	-moz-transform: rotate(354deg) translate(0px, -185px);
+	-webkit-transform: rotate(354deg) translate(0px, -185px);
+	transform: rotate(354deg) translate(0px, -185px);
+}
+.clockSecond {
+	position: absolute;
+	top: 196px;
+	width: 400px;
+	height: 8px;
+	-moz-transform: rotate(270deg);
+	-moz-animation: second 60s infinite linear;
+	-webkit-transform: rotate(270deg);
+	-webkit-animation: second 60s infinite linear;
+	transform: rotate(270deg);
+	animation: second 60s infinite linear;
+}
+.clockSecond .topArraw {
+	position: absolute;
+	left: 200px;
+	height: 0;
+	width: 0;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-left: 190px solid red;
+	-moz-box-shadow: 2px 0px 0px red;
+	-webkit-box-shadow: 2px 0px 0px red;
+	box-shadow: 2px 0px 0px red;
+}
+@-moz-keyframes second {
+	0% { -moz-transform: rotate(270deg); transform: rotate(270deg); }
+	100% { -moz-transform: rotate(630deg); transform: rotate(630deg); }
+}
+@-webkit-keyframes second {
+	0% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(630deg); transform: rotate(630deg); }
+}
+@keyframes second {
+	0% { transform: rotate(270deg); }
+	100% { transform: rotate(630deg); }
+}
+.clockMinute {
+	top: 196px;
+	-moz-transform: rotate(270deg);
+	-moz-animation: minute 3600s infinite linear;
+	-webkit-transform: rotate(270deg);
+	-webkit-animation: minute 3600s infinite linear;
+	transform: rotate(270deg)
+	animation: minute 3600s infinite linear;
+}
+.clockMinute .indicator {
+	position: absolute;
+	top: 0;
+	left: 200px;
+	background: #363636;
+	width: 150px;
+	height: 8px;
+	-moz-box-shadow: 8px 3px 8px black;
+	-webkit-box-shadow: 8px 3px 8px black;
+	box-shadow: 8px 3px 8px black;
+}
+.clockMinute .topArraw {
+	position: absolute;
+	top: 0;
+	left: 347px;
+	width: 0px;
+	height: 8px;
+	border-right: 8px solid #363636;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+@-moz-keyframes minute {
+	0% { -moz-transform: rotate(270deg); transform: rotate(270deg); }
+	100% { -moz-transform: rotate(630deg); transform: rotate(630deg); }
+}
+@-webkit-keyframes minute {
+	0% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(630deg); transform: rotate(630deg); }
+}
+@keyframes minute {
+	0% { transform: rotate(270deg); }
+	100% { transform: rotate(630deg); }
+}
+.clockHour {
+	top: 192px;
+	position: absolute;
+	height: 16px;
+	-moz-transform: rotate(270deg);
+	-moz-animation: hour 216000s infinite linear;
+	-webkit-transform: rotate(270deg);
+	-webkit-animation: hour 216000s infinite linear;
+	transform: rotate(270deg)
+	animation: hour 216000s infinite linear;
+}
+.clockHour .indicator {
+	position: absolute;
+	top: 0;
+	left: 200px;
+	background: #000;
+	width: 90px;
+	height: 16px;
+	-moz-box-shadow: 11px 3px 14px black;
+	-webkit-box-shadow: 11px 3px 14px black;
+	box-shadow: 11px 3px 14px black;
+}
+.clockHour .topArraw {
+	position: absolute;
+	top: 0;
+	left: 290px;
+	width: 0px;
+	height: 0px;
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 12px solid #000;
+}
+@-moz-keyframes hour {
+	0% { -moz-transform: rotate(270deg); transform: rotate(270deg); }
+	100% { -moz-transform: rotate(630deg); transform: rotate(630deg); }
+}
+@-webkit-keyframes hour {
+	0% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+	100% { -webkit-transform: rotate(630deg); transform: rotate(630deg); }
+}
+@keyframes hour {
+	0% { transform: rotate(270deg); }
+	100% { transform: rotate(630deg); }
+}
+footer {
+	margin: 80px auto 0;
+	text-align: center;
+}

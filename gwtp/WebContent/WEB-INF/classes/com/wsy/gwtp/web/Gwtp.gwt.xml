@@ -50,6 +50,4 @@
 	<set-configuration-property name='gin.ginjector'
 		value='com.wsy.gwtp.web.client.gin.ClientGinjector' />
 
-	<stylesheet src="css/gxt-resources.css" />
-
 </module>

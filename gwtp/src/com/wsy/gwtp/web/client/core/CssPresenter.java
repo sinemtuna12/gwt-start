@@ -6,6 +6,7 @@ import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.RequestTabsHandler;
 import com.gwtplatform.mvp.client.TabContainerPresenter;
+import com.gwtplatform.mvp.client.TabData;
 import com.gwtplatform.mvp.client.TabView;
 import com.gwtplatform.mvp.client.annotations.ContentSlot;
 import com.gwtplatform.mvp.client.annotations.ProxyCodeSplit;
@@ -15,6 +16,8 @@ import com.gwtplatform.mvp.client.proxy.NonLeafTabContentProxy;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 import com.gwtplatform.mvp.client.proxy.RevealContentHandler;
+import com.wsy.gwtp.web.client.TabDataExt;
+import com.wsy.gwtp.web.client.gin.ClientGinjector;
 import com.wsy.gwtp.web.client.place.NameTokens;
 import com.wsy.gwtp.web.client.place.TabPriorities;
 
@@ -25,10 +28,14 @@ public class CssPresenter extends
 	}
 
 	@ProxyCodeSplit
-	@TabInfo(container = MainPagePresenter.class, label = "CSS", priority = TabPriorities.css, nameToken = NameTokens.cherryBlossom)
 	public interface MyProxy extends NonLeafTabContentProxy<CssPresenter> {
 	}
 
+	@TabInfo(container = MainPagePresenter.class, nameToken = NameTokens.cherryBlossom)
+	public static TabData getTabData(ClientGinjector injector) {
+//		@TabInfo(container = MainPagePresenter.class, label = "CSS", priority = TabPriorities.css, nameToken = NameTokens.cherryBlossom)
+		return new TabDataExt("CSS", TabPriorities.css, null);
+	}
 	@ContentSlot
 	public static final Type<RevealContentHandler<?>> TYPE_SetTabContent = new Type<RevealContentHandler<?>>();
 

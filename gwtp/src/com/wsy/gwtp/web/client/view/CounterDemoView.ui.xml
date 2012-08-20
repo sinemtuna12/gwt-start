@@ -1,0 +1,104 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style src="../resources/css/counterdemo.css">
+	</ui:style>
+	<g:HTMLPanel>
+		<header>
+			<h1 class="{style.title}">Counter</h1>
+		</header>
+		<div class="{style.clockFrame} {style.clockFrameOuter}">
+			<div class="{style.clockFrame} {style.clockFrameInner}">
+				<div class="{style.clock0deg} {style.clockMarkerText}">12</div>
+				<div class="{style.clock0deg} {style.clockMarker}"></div>
+				<div class="{style.clock6deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock12deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock18deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock24deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock30deg} {style.clockMarkerText}">1</div>
+				<div class="{style.clock30deg} {style.clockMarker}"></div>
+				<div class="{style.clock36deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock42deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock48deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock54deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock60deg} {style.clockMarkerText}">2</div>
+				<div class="{style.clock60deg} {style.clockMarker}"></div>
+				<div class="{style.clock66deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock72deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock78deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock84deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock90deg} {style.clockMarkerText}">3</div>
+				<div class="{style.clock90deg} {style.clockMarker}"></div>
+				<div class="{style.clock96deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock102deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock108deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock114deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock120deg} {style.clockMarkerText}">4</div>
+				<div class="{style.clock120deg} {style.clockMarker}"></div>
+				<div class="{style.clock126deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock132deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock138deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock144deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock150deg} {style.clockMarkerText}">5</div>
+				<div class="{style.clock150deg} {style.clockMarker}"></div>
+				<div class="{style.clock156deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock162deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock168deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock174deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock180deg} {style.clockMarkerText}">6</div>
+				<div class="{style.clock180deg} {style.clockMarker}"></div>
+				<div class="{style.clock186deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock192deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock198deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock204deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock210deg} {style.clockMarkerText}">7</div>
+				<div class="{style.clock210deg} {style.clockMarker}"></div>
+				<div class="{style.clock216deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock222deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock228deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock234deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock240deg} {style.clockMarkerText}">8</div>
+				<div class="{style.clock240deg} {style.clockMarker}"></div>
+				<div class="{style.clock246deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock252deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock258deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock264deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock270deg} {style.clockMarkerText}">9</div>
+				<div class="{style.clock270deg} {style.clockMarker}"></div>
+				<div class="{style.clock276deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock282deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock288deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock294deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock300deg} {style.clockMarkerText}">10</div>
+				<div class="{style.clock300deg} {style.clockMarker}"></div>
+				<div class="{style.clock306deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock312deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock318deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock324deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock330deg} {style.clockMarkerText}">11</div>
+				<div class="{style.clock330deg} {style.clockMarker}"></div>
+				<div class="{style.clock336deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock342deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock348deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clock354deg} {style.clockMarker} {style.clockMarkerMin}"></div>
+				<div class="{style.clockHour} {style.clockIndicator}">
+					<div class="{style.indicator}"></div>
+					<div class="{style.topArraw}"></div>
+				</div>
+				<div class="{style.clockMinute} {style.clockIndicator}">
+					<div class="{style.indicator}"></div>
+					<div class="{style.topArraw}"></div>
+				</div>
+				<div class="{style.clockSecond} {style.clockIndicator}">
+					<div class="{style.indicator}"></div>
+					<div class="{style.topArraw}"></div>
+				</div>
+				<div class="{style.clockCenter}"></div>
+			</div>
+		</div>
+		<footer>
+			Demo by
+			<a href="http://www.darkyndy.com/home" target="_blank">darkyndy</a>
+		</footer>
+	</g:HTMLPanel>
+</ui:UiBinder> 

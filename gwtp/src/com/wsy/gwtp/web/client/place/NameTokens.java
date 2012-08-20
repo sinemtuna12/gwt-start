@@ -79,6 +79,12 @@ public class NameTokens {
 
 	public static final String cellRenderer = "!cellRenderer";
 
+	public static final String counterDemo = "!counterDemo";
+
+	public static final String animationClock = "!animationClock";
+
+	public static final String iconMenu = "!iconMenu";
+
 	public static String getMickey() {
 		return mickey;
 	}

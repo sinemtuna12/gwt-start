@@ -3,13 +3,26 @@ package com.wsy.gwtp.web.client.gin;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 import com.wsy.gwtp.web.client.core.AboutUSPresenter;
+import com.wsy.gwtp.web.client.core.BoostrapPresenter;
+import com.wsy.gwtp.web.client.core.CSS3ChartPresenter;
+import com.wsy.gwtp.web.client.core.CellRendererPresenter;
+import com.wsy.gwtp.web.client.core.CherryBlossomPresenter;
+import com.wsy.gwtp.web.client.core.ClockDemoPresenter;
+import com.wsy.gwtp.web.client.core.CounterDemoPresenter;
 import com.wsy.gwtp.web.client.core.CssPresenter;
 import com.wsy.gwtp.web.client.core.FilterGridPresenter;
+import com.wsy.gwtp.web.client.core.GWTPresenter;
+import com.wsy.gwtp.web.client.core.GXTTabPresenter;
+import com.wsy.gwtp.web.client.core.GridSystemPresenter;
 import com.wsy.gwtp.web.client.core.HomePresenter;
 import com.wsy.gwtp.web.client.core.JsonGridPresenter;
 import com.wsy.gwtp.web.client.core.MainPagePresenter;
+import com.wsy.gwtp.web.client.core.MickeyPresenter;
 import com.wsy.gwtp.web.client.core.RemoteFilterGridPresenter;
 import com.wsy.gwtp.web.client.core.RequestFactoryGridPresenter;
+import com.wsy.gwtp.web.client.core.RowExpandGridPresenter;
+import com.wsy.gwtp.web.client.core.SimpleCSSPresenter;
+import com.wsy.gwtp.web.client.core.TooltipChartPresenter;
 import com.wsy.gwtp.web.client.place.ClientPlaceManager;
 import com.wsy.gwtp.web.client.place.DefaultPlace;
 import com.wsy.gwtp.web.client.place.NameTokens;
@@ -19,11 +32,14 @@ import com.wsy.gwtp.web.client.view.CSS3ChartView;
 import com.wsy.gwtp.web.client.view.CellRendererView;
 import com.wsy.gwtp.web.client.view.CherryBlossomView;
 import com.wsy.gwtp.web.client.view.ClockDemoView;
+import com.wsy.gwtp.web.client.view.CounterDemoView;
 import com.wsy.gwtp.web.client.view.CssView;
 import com.wsy.gwtp.web.client.view.FilterGridView;
+import com.wsy.gwtp.web.client.view.GWTView;
 import com.wsy.gwtp.web.client.view.GXTTabView;
 import com.wsy.gwtp.web.client.view.GridSystemView;
 import com.wsy.gwtp.web.client.view.HomeView;
+import com.wsy.gwtp.web.client.view.IconMenuView;
 import com.wsy.gwtp.web.client.view.JsonGridView;
 import com.wsy.gwtp.web.client.view.MainPageView;
 import com.wsy.gwtp.web.client.view.MickeyView;
@@ -32,19 +48,7 @@ import com.wsy.gwtp.web.client.view.RequestFactoryGridView;
 import com.wsy.gwtp.web.client.view.RowExpandGridView;
 import com.wsy.gwtp.web.client.view.SimpleCSSView;
 import com.wsy.gwtp.web.client.view.TooltipChartView;
-import com.wsy.gwtp.web.client.core.GWTPresenter;
-import com.wsy.gwtp.web.client.core.TooltipChartPresenter;
-import com.wsy.gwtp.web.client.core.GXTTabPresenter;
-import com.wsy.gwtp.web.client.core.RowExpandGridPresenter;
-import com.wsy.gwtp.web.client.core.BoostrapPresenter;
-import com.wsy.gwtp.web.client.core.GridSystemPresenter;
-import com.wsy.gwtp.web.client.core.CherryBlossomPresenter;
-import com.wsy.gwtp.web.client.core.CSS3ChartPresenter;
-import com.wsy.gwtp.web.client.core.SimpleCSSPresenter;
-import com.wsy.gwtp.web.client.core.ClockDemoPresenter;
-import com.wsy.gwtp.web.client.core.MickeyPresenter;
-import com.wsy.gwtp.web.client.view.GWTView;
-import com.wsy.gwtp.web.client.core.CellRendererPresenter;
+import com.wsy.gwtp.web.client.core.IconMenuPresenter;
 
 public class ClientModule extends AbstractPresenterModule {
 
@@ -52,6 +56,8 @@ public class ClientModule extends AbstractPresenterModule {
 	protected void configure() {
 		install(new DefaultModule(ClientPlaceManager.class));
 
+//		bind(BrowserCheckGatekeeper.class).in(Singleton.class);
+		
 		bindPresenter(MainPagePresenter.class, MainPagePresenter.MyView.class,
 				MainPageView.class, MainPagePresenter.MyProxy.class);
 
@@ -128,5 +134,16 @@ public class ClientModule extends AbstractPresenterModule {
 		bindPresenter(CellRendererPresenter.class,
 				CellRendererPresenter.MyView.class, CellRendererView.class,
 				CellRendererPresenter.MyProxy.class);
+		
+		bindPresenter(CounterDemoPresenter.class,
+				CounterDemoPresenter.MyView.class, CounterDemoView.class,
+				CounterDemoPresenter.MyProxy.class);
+		
+//		bindPresenter(AnimationClockPresenter.class, 
+//				AnimationClockPresenter.MyView.class, AnimationClockView.class,
+//				AnimationClockPresenter.MyProxy.class);
+
+		bindPresenter(IconMenuPresenter.class, IconMenuPresenter.MyView.class,
+				IconMenuView.class, IconMenuPresenter.MyProxy.class);
 	}
 }
