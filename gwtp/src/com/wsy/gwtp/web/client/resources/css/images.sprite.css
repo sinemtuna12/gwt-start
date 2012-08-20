@@ -1,0 +1,33 @@
+@sprite .one {
+	gwt-image: "one";
+	height: 60px;
+	width: 60px;
+}
+
+@sprite .two {
+	gwt-image: "two";
+}
+
+@sprite .three {
+	gwt-image: "three";
+}
+
+@sprite .four {
+	gwt-image: "four";
+}
+
+@sprite .five {
+	gwt-image: "five";
+}
+
+@sprite .six {
+	gwt-image: "six";
+}
+
+@sprite .seven {
+	gwt-image: "seven";
+}
+
+@sprite .eight {
+	gwt-image: "eight";
+}
