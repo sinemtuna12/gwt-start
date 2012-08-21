@@ -8,6 +8,7 @@ import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.wsy.gwtp.web.client.core.AboutUSPresenter;
+import com.wsy.gwtp.web.client.core.AggregationGridPresenter;
 import com.wsy.gwtp.web.client.core.BoostrapPresenter;
 import com.wsy.gwtp.web.client.core.CSS3ChartPresenter;
 import com.wsy.gwtp.web.client.core.CellRendererPresenter;
@@ -91,6 +92,8 @@ public interface ClientGinjector extends Ginjector {
 	AsyncProvider<CounterDemoPresenter> getCounterDemoPresenter();
 
 	AsyncProvider<IconMenuPresenter> getIconMenuPresenter();
+
+	AsyncProvider<AggregationGridPresenter> getAggregationGridPresenter();
 	
 //	AsyncProvider<AnimationClockPresenter> getAnimationClockPresenter();
 }

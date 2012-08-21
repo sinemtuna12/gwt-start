@@ -85,6 +85,8 @@ public class NameTokens {
 
 	public static final String iconMenu = "!iconMenu";
 
+	public static final String aggGrid = "!aggGrid";
+
 	public static String getMickey() {
 		return mickey;
 	}

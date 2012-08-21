@@ -20,6 +20,7 @@ import com.sencha.gxt.widget.core.client.ContentPanel;
 import com.sencha.gxt.widget.core.client.grid.ColumnConfig;
 import com.sencha.gxt.widget.core.client.grid.ColumnModel;
 import com.sencha.gxt.widget.core.client.grid.Grid;
+import com.sencha.gxt.widget.core.client.grid.HeaderGroupConfig;
 import com.sencha.gxt.widget.core.client.grid.RowExpander;
 import com.wsy.gwtp.web.client.core.RowExpandGridPresenter;
 import com.wsy.gwtp.web.client.model.Stock;
@@ -85,7 +86,7 @@ public class RowExpandGridView extends ViewImpl implements
 		    l.add(changeCol);
 		    l.add(lastTransCol);
 		    ColumnModel<Stock> cm = new ColumnModel<Stock>(l);
-		 
+//		    cm.addHeaderGroup(0, 4, new HeaderGroupConfig("Price", 2, 2));
 		    ListStore<Stock> store = new ListStore<Stock>(props.key());
 		    store.addAll(TestData.getStocks());
 		 

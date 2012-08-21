@@ -24,6 +24,7 @@ public interface TabPriorities {
 	public static final int remoteFilterGrid = 3;
 	public static final int requestFactoryGrid = 4;
 	public static final int tooltipChart = 6;
+	public static final int aggGrid = 7;
 
 	public static final int gridSystem = 0;
 

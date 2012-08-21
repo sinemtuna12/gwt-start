@@ -64,7 +64,6 @@ public class JsonGridView extends ViewImpl implements JsonGridPresenter.MyView {
 	
 
 	private void afterBind() {
-		
 	}
 
 	@Override

@@ -3,6 +3,7 @@ package com.wsy.gwtp.web.client.gin;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 import com.wsy.gwtp.web.client.core.AboutUSPresenter;
+import com.wsy.gwtp.web.client.core.AggregationGridPresenter;
 import com.wsy.gwtp.web.client.core.BoostrapPresenter;
 import com.wsy.gwtp.web.client.core.CSS3ChartPresenter;
 import com.wsy.gwtp.web.client.core.CellRendererPresenter;
@@ -49,6 +50,7 @@ import com.wsy.gwtp.web.client.view.RowExpandGridView;
 import com.wsy.gwtp.web.client.view.SimpleCSSView;
 import com.wsy.gwtp.web.client.view.TooltipChartView;
 import com.wsy.gwtp.web.client.core.IconMenuPresenter;
+import com.wsy.gwtp.web.client.view.AggregationGridView;
 
 public class ClientModule extends AbstractPresenterModule {
 
@@ -145,5 +147,10 @@ public class ClientModule extends AbstractPresenterModule {
 
 		bindPresenter(IconMenuPresenter.class, IconMenuPresenter.MyView.class,
 				IconMenuView.class, IconMenuPresenter.MyProxy.class);
+
+		bindPresenter(AggregationGridPresenter.class,
+				AggregationGridPresenter.MyView.class,
+				AggregationGridView.class,
+				AggregationGridPresenter.MyProxy.class);
 	}
 }
