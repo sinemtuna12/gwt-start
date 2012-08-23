@@ -21,7 +21,7 @@
 	float: left;
 	position: relative;
 	z-index: 10;
-	background: url(trans.gif);
+	/*background: url(trans.gif);*/
 	text-indent: -9999px;
 }
 

@@ -87,6 +87,8 @@ public class NameTokens {
 
 	public static final String aggGrid = "!aggGrid";
 
+	public static final String canvasDemo = "!canvasDemo";
+
 	public static String getMickey() {
 		return mickey;
 	}

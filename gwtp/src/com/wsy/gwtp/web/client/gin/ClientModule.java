@@ -30,6 +30,7 @@ import com.wsy.gwtp.web.client.place.NameTokens;
 import com.wsy.gwtp.web.client.view.AboutUSView;
 import com.wsy.gwtp.web.client.view.BoostrapView;
 import com.wsy.gwtp.web.client.view.CSS3ChartView;
+import com.wsy.gwtp.web.client.view.CavasDemoView;
 import com.wsy.gwtp.web.client.view.CellRendererView;
 import com.wsy.gwtp.web.client.view.CherryBlossomView;
 import com.wsy.gwtp.web.client.view.ClockDemoView;
@@ -51,6 +52,7 @@ import com.wsy.gwtp.web.client.view.SimpleCSSView;
 import com.wsy.gwtp.web.client.view.TooltipChartView;
 import com.wsy.gwtp.web.client.core.IconMenuPresenter;
 import com.wsy.gwtp.web.client.view.AggregationGridView;
+import com.wsy.gwtp.web.client.core.CavasDemoPresenter;
 
 public class ClientModule extends AbstractPresenterModule {
 
@@ -152,5 +154,9 @@ public class ClientModule extends AbstractPresenterModule {
 				AggregationGridPresenter.MyView.class,
 				AggregationGridView.class,
 				AggregationGridPresenter.MyProxy.class);
+
+		bindPresenter(CavasDemoPresenter.class,
+				CavasDemoPresenter.MyView.class, CavasDemoView.class,
+				CavasDemoPresenter.MyProxy.class);
 	}
 }

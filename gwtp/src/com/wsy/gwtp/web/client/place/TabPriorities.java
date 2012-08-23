@@ -38,6 +38,7 @@ public interface TabPriorities {
 	public static final int iconMenu = 7;
 
 	public static final int cellRenderer = 0;
+	public static final int cavasDemo = 1;
 
 	
 
