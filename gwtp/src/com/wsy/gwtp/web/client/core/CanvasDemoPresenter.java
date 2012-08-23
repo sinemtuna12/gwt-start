@@ -12,20 +12,24 @@ import com.gwtplatform.mvp.client.proxy.TabContentProxyPlace;
 import com.wsy.gwtp.web.client.place.NameTokens;
 import com.wsy.gwtp.web.client.place.TabPriorities;
 
-public class CavasDemoPresenter extends
-		Presenter<CavasDemoPresenter.MyView, CavasDemoPresenter.MyProxy> {
+public class CanvasDemoPresenter extends
+		Presenter<CanvasDemoPresenter.MyView, CanvasDemoPresenter.MyProxy> {
 
 	public interface MyView extends View {
+
+		void start();
+
+		void stop();
 	}
 
 	@ProxyCodeSplit
 	@NameToken(NameTokens.canvasDemo)
-	@TabInfo(container = GWTPresenter.class, label = "Cavas Demo", priority = TabPriorities.cavasDemo)
-	public interface MyProxy extends TabContentProxyPlace<CavasDemoPresenter> {
+	@TabInfo(container = GWTPresenter.class, label = "Canvas Demo", priority = TabPriorities.cavasDemo)
+	public interface MyProxy extends TabContentProxyPlace<CanvasDemoPresenter> {
 	}
 
 	@Inject
-	public CavasDemoPresenter(final EventBus eventBus, final MyView view,
+	public CanvasDemoPresenter(final EventBus eventBus, final MyView view,
 			final MyProxy proxy) {
 		super(eventBus, view, proxy);
 	}
@@ -39,4 +43,20 @@ public class CavasDemoPresenter extends
 	protected void onBind() {
 		super.onBind();
 	}
+
+	@Override
+	protected void onReveal() {
+		super.onReveal();
+		getView().start();
+	}
+
+	@Override
+	protected void onHide() {
+		super.onHide();
+		getView().stop();
+	}
+	
+	
+	
+	
 }

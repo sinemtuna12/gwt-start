@@ -33,7 +33,7 @@ import com.wsy.gwtp.web.client.ui.RoundTabPanel;
 import com.wsy.gwtp.web.client.ui.SimpleTabPanel;
 import com.wsy.gwtp.web.client.view.MainMenu;
 import com.wsy.gwtp.web.client.core.IconMenuPresenter;
-import com.wsy.gwtp.web.client.core.CavasDemoPresenter;
+import com.wsy.gwtp.web.client.core.CanvasDemoPresenter;
 
 @GinModules({ DispatchAsyncModule.class, ClientModule.class })
 public interface ClientGinjector extends Ginjector {
@@ -96,7 +96,7 @@ public interface ClientGinjector extends Ginjector {
 
 	AsyncProvider<AggregationGridPresenter> getAggregationGridPresenter();
 
-	AsyncProvider<CavasDemoPresenter> getCavasDemoPresenter();
+	AsyncProvider<CanvasDemoPresenter> getCavasDemoPresenter();
 	
 //	AsyncProvider<AnimationClockPresenter> getAnimationClockPresenter();
 }

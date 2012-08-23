@@ -7,8 +7,9 @@ import java.util.Date;
 
 import com.google.gwt.canvas.client.Canvas;
 import com.google.gwt.canvas.dom.client.Context2d;
-import com.google.gwt.dom.client.CanvasElement;
+import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.Timer;
+import com.wsy.gwtp.web.client.view.CanvasDemoView;
 
 /**
  * @author e518417
@@ -16,8 +17,9 @@ import com.google.gwt.user.client.Timer;
  */
 public class SolarSystem {
 
-	Canvas canvas;
-
+	private Canvas canvas;
+	private Canvas buffer;
+	private CanvasDemoView view;
 	private int width;
 	private int height;
 
@@ -25,43 +27,30 @@ public class SolarSystem {
 
 	private long renderTime;
 
-	public SolarSystem(Canvas canvas) {
+	private Timer timer;
+	
+	public SolarSystem(CanvasDemoView view, Canvas canvas, int width, int height) {
+		this.view = view;
 		this.canvas = canvas;
+		this.width = width;
+		this.height = height;
+		this.buffer = Canvas.createIfSupported();
+//		this.buffer.setWidth(width + "px");
+//		this.buffer.setHeight(height + "px");
+		this.buffer.setCoordinateSpaceWidth(width);
+		this.buffer.setCoordinateSpaceHeight(height);
+		init();
 	}
 
 	public int getWidth() {
 		return width;
 	}
 
-	public void setWidth(int width) {
-		this.width = width;
-	}
-
 	public int getHeight() {
 		return height;
 	}
 
-	public void setHeight(int height) {
-		this.height = height;
-	}
-
-	public void start() {
-		// Measure the canvas element.
-		// canvas.parent.rect.then((ElementRect rect) {
-		// _width = rect.client.width;
-		// _height = rect.client.height;
-		//
-		// canvas.width = _width;
-		//
-		// // Initialize the planets and start the simulation.
-		// _start();
-		// });
-		this.width = canvas.getOffsetWidth();
-		this.height = canvas.getOffsetHeight();
-		_start();
-	}
-
-	private void _start() {
+	private void init() {
 		// Create the Sun.
 		sun = new PlanetaryBody(this, "Sun", "#ff2", 14.0);
 
@@ -96,32 +85,36 @@ public class SolarSystem {
 				1070 * h, 7.154 * g));
 		jupiter.addPlanet(new PlanetaryBody(this, "Callisto", "gray", 4.8 * f,
 				1882 * h, 16.689 * g));
-
-		// Start the animation loop.
-		// requestRedraw();
-		new Timer() {
+	}
+	
+	public void start() {
+		timer = new Timer() {
 
 			@Override
 			public void run() {
 				draw();
 			}
-		}.scheduleRepeating(25);
+		};
+		timer.scheduleRepeating(1);
 	}
 
-	public boolean draw() {
+	public void draw() {
+		long time = new Date().getTime();
+		GWT.log("[renderTime: " + renderTime + ", time: " + time + "] and they differ [" + (time - renderTime) + "]");
 		if (renderTime != 0) {
-			// showFps((1000 / (time - renderTime)));
+			view.showFps((1000.0 / (time - renderTime)));
 		}
 
-		renderTime = new Date().getTime();
+		renderTime = time;
 
-		Context2d context = canvas.getContext2d();
+		Context2d context = buffer.getContext2d();
 
 		drawBackground(context);
 		drawPlanets(context);
-
-		// requestRedraw();
-		return true;
+		
+		Context2d front = this.canvas.getContext2d();
+		
+		front.drawImage(context.getCanvas(), 0, 0);
 	}
 
 	private void drawBackground(Context2d context) {
@@ -160,6 +153,10 @@ public class SolarSystem {
 
 	public double getRenderTime() {
 		return this.renderTime;
+	}
+
+	public void stop() {
+		this.timer.cancel();
 	}
 
 }

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gwt.canvas.dom.client.Context2d;
+import com.google.gwt.core.client.GWT;
 
 /**
  * @author e518417
@@ -22,23 +23,14 @@ public class PlanetaryBody {
 	private double orbitRadius;
 	private List<PlanetaryBody> planets;
 
-	public PlanetaryBody(String name, String color, double orbitPeriod,
-			double bodySize, double orbitRadius, SolarSystem solarSystem) {
-		this.name = name;
-		this.color = color;
-		this.bodySize = bodySize;
-		this.orbitRadius = orbitRadius;
-		this.solarSystem = solarSystem;
-		this.planets = new ArrayList<PlanetaryBody>();
-		this.orbitSpeed = this.calculateSpeed(orbitPeriod);
-	}
 
 	public PlanetaryBody(SolarSystem solarSystem, String name,
 			String color, double bodySize) {
 		this.solarSystem = solarSystem;
 		this.name = name;
 		this.color = color;
-		this.bodySize = bodySize;
+		this.bodySize = solarSystem.normalizePlanetSize(bodySize);
+		this.planets = new ArrayList<PlanetaryBody>();
 	}
 
 	public PlanetaryBody(SolarSystem solarSystem, String name,
@@ -46,17 +38,19 @@ public class PlanetaryBody {
 		this.solarSystem = solarSystem;
 		this.name = name;
 		this.color = color;
-		this.bodySize = bodySize;
-		this.orbitRadius = orbitRadius;
+		this.bodySize = solarSystem.normalizePlanetSize(bodySize);
+		this.orbitRadius = solarSystem.normalizeOrbitRadius(orbitRadius);
+		this.planets = new ArrayList<PlanetaryBody>();
 	}
 	public PlanetaryBody(SolarSystem solarSystem, String name,
 			String color, double bodySize, double orbitRadius, double orbitPeriod) {
 		this.solarSystem = solarSystem;
 		this.name = name;
 		this.color = color;
-		this.bodySize = bodySize;
-		this.orbitRadius = orbitRadius;
+		this.bodySize = solarSystem.normalizePlanetSize(bodySize);
+		this.orbitRadius = solarSystem.normalizeOrbitRadius(orbitRadius);
 		this.orbitSpeed = this.calculateSpeed(orbitPeriod);
+		this.planets = new ArrayList<PlanetaryBody>();
 	}
 
 	public void addPlanet(PlanetaryBody plant) {
@@ -64,7 +58,8 @@ public class PlanetaryBody {
 	}
 
 	public void draw(Context2d context, int x, int y) {
-		drawSelf(context, x, y);
+		Point pos = calculatePos(x, y);
+		drawSelf(context, pos.getX(), pos.getY());
 		drawChildren(context, x, y);
 	}
 
@@ -87,6 +82,7 @@ public class PlanetaryBody {
 			context.fill();
 			context.closePath();
 			context.stroke();
+			
 			context.setShadowOffsetX(0);
 			context.setShadowOffsetY(0);
 			context.setShadowBlur(0);
@@ -96,14 +92,18 @@ public class PlanetaryBody {
 			context.fill();
 			context.closePath();
 			context.stroke();
+		} catch(Throwable ex) {
+			GWT.log(ex.getMessage(), ex);
 		} finally {
 			context.restore();
 		}
 	}
 
 	private void drawChildren(Context2d context, int x, int y) {
-		for (PlanetaryBody planet : planets) {
-			planet.draw(context, x, y);
+		if(this.planets.size() > 0) {
+			for (PlanetaryBody planet : planets) {
+				planet.draw(context, x, y);
+			}
 		}
 	}
 
