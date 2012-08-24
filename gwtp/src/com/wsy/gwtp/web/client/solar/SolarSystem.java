@@ -100,7 +100,6 @@ public class SolarSystem {
 
 	public void draw() {
 		long time = new Date().getTime();
-		GWT.log("[renderTime: " + renderTime + ", time: " + time + "] and they differ [" + (time - renderTime) + "]");
 		if (renderTime != 0) {
 			view.showFps((1000.0 / (time - renderTime)));
 		}

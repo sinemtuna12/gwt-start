@@ -60,7 +60,7 @@ public class PlanetaryBody {
 	public void draw(Context2d context, int x, int y) {
 		Point pos = calculatePos(x, y);
 		drawSelf(context, pos.getX(), pos.getY());
-		drawChildren(context, x, y);
+		drawChildren(context, pos.getX(), pos.getY());
 	}
 
 	private void drawSelf(Context2d context, int x, int y) {

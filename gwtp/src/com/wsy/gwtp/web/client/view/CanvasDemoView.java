@@ -3,6 +3,8 @@ package com.wsy.gwtp.web.client.view;
 import com.github.gwtbootstrap.client.ui.Label;
 import com.google.gwt.canvas.client.Canvas;
 import com.google.gwt.core.client.GWT;
+import com.google.gwt.i18n.client.NumberFormat;
+import com.google.gwt.user.client.ui.FlowPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.inject.Inject;
@@ -20,11 +22,11 @@ public class CanvasDemoView extends ViewImpl implements
 	private SolarSystem system;
 
 	private double avgFps;
-	private VerticalPanel panel;
+	private FlowPanel panel;
 	private Label fpsLbl;
 	@Inject
 	public CanvasDemoView() {
-		panel = new VerticalPanel();
+		panel = new FlowPanel();
 		
 		this.canvas = Canvas.createIfSupported();
 		if(this.canvas != null) {
@@ -35,6 +37,7 @@ public class CanvasDemoView extends ViewImpl implements
 		    this.system = new SolarSystem(this, this.canvas, width, height);
 		    fpsLbl = new Label("");
 		    panel.add(this.canvas);
+		    panel.add(new Label("A sample from Dart, but rewriten with GWT."));
 		    panel.add(fpsLbl);
 		} else {
 			panel.add(new Label("Canvas not supported"));
@@ -58,14 +61,11 @@ public class CanvasDemoView extends ViewImpl implements
 	}
 
 	public void showFps(double fps) {
-		GWT.log("fps got is [" + fps + "]");
-		
 		if (avgFps == 0) {
 			avgFps = fps;
 		}
 
 		avgFps = fps * 0.05 + avgFps * 0.95;
-		GWT.log("avgFps is [" + avgFps + "]");
-		fpsLbl.setText(avgFps + " fps");
+		fpsLbl.setText(NumberFormat.getFormat("#0").format(avgFps) + " fps");
 	}
 }
